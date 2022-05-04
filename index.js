@@ -10,11 +10,19 @@ const app = express();
 const PORT = process.env.PORT || 6000;
 
 app.use(cors());
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({extended:true}));
+
+const userRouter = require('./Routes/userRoutes');
+const postRouter = require('./Routes/postRoutes');
+const authRouter = require('./Routes/authRoutes');
 
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+
+app.use('/users',userRouter);
+app.use('/posts',postRouter);
+app.use('/auth',authRouter);
 
 app.get("/", (req, res) => {
     res.send("Api Running");
