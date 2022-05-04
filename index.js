@@ -52,7 +52,7 @@ app.use('/posts',postRouter);
 app.use('/auth',authRouter);
 
 app.get("/", (req, res) => {
-    res.send("Api Running");
+    res.send("Api Running!!!");
   });
 
   app.listen(PORT, () => {
