@@ -103,10 +103,10 @@ async function updateUser(req, res) {
       coverPicture: req.body.coverPicture,
     };
 
-    await User.findOneAndUpdate(conditions, update, (err, result) => {
-      if (err) throw err;
-      res.json(result);
-    });
+    let doc = await User.findOneAndUpdate(conditions, update);
+    doc = await User.findOne(conditions);
+
+    res.json(doc)
   } catch (error) {
     console.log(error);
   }
