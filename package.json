@@ -1,5 +1,5 @@
 {
-  "name": "server-pro",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,18 +10,10 @@
     "mongoose": "^6.3.2",
     "nodemon": "^2.0.16"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eliasadmaso1/social-media-server.git"
-  },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eliasadmaso1/social-media-server/issues"
-  },
-  "homepage": "https://github.com/eliasadmaso1/social-media-server#readme"
+  "license": "ISC"
+
 }
